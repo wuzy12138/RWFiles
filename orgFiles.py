@@ -11,10 +11,10 @@ p = Path.cwd() / "orgLab"
 #shutil.copy(source, destination) to copy file
 shutil.copy((p / "src.txt"), (p / "dst.txt"))
 
-#shutil.copytree(source, destination) to copy folder
-#maybe need to judge whether dstFolder exists
+# shutil.copytree(source, destination) to copy folder
+# maybe need to judge whether dstFolder exists
 # if (p / "dstFolder")
-# shutil.copytree((p / "srcFolder"), (p / "dstFolder"))
+shutil.copytree((p / "srcFolder"), (p / "dstFolder"))
 
 #move and rename files and folder
 #shutil.move(src, dst)
