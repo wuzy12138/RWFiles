@@ -19,6 +19,7 @@
 # random order, along with the answer key.
 
 import random
+import os
 # The quiz data. Keys are states and values are their capitals.
 capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
    'Arkansas': 'Little Rock', 'California': 'Sacramento', 'Colorado': 'Denver',
@@ -39,12 +40,14 @@ capitals = {'Alabama': 'Montgomery', 'Alaska': 'Juneau', 'Arizona': 'Phoenix',
    'Montpelier', 'Virginia': 'Richmond', 'Washington': 'Olympia', 
    'West Virginia': 'Charleston', 'Wisconsin': 'Madison', 'Wyoming': 'Cheyenne'}
 
+os.mkdir("quizzes")
+os.mkdir("answers")
 # Generate 35 quiz files.
 for quizNum in range(35):
    # TODO: Create the quiz and answer key files.
    #f'' means special format 
-   quizFile = open(f'capitalsQuiz{quizNum+1}.txt', 'w')
-   ansFile = open(f'capitalsAns{quizNum+1}.txt', 'w')
+   quizFile = open(f'quizzes/capitalsQuiz{quizNum+1}.txt', 'w')
+   ansFile = open(f'answers/capitalsAns{quizNum+1}.txt', 'w')
    # TODO: Write out the header for the quiz.
    quizFile.write('Name:\n\nDate:\n\nPeriod:\n\n')
    quizFile.write((' ' * 20) + f'State Capitals Quiz (Form{quizNum + 1})')
