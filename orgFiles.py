@@ -47,3 +47,5 @@ for folderName, subfolders, filenames in os.walk(p):
         print('FILE INSIDE ' + folderName + ': '+ filename)
 
     print('')
+    
+    
